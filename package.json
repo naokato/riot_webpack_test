@@ -1,0 +1,25 @@
+{
+  "name": "naokato-riot-webpack",
+  "version": "0.0.1",
+  "description": "riot and webpack test",
+  "repository": "naokato/riot_webpack_test",
+  "main": "app/main.js",
+  "author": "naokato",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 3000"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "riot": "^3.4.0",
+    "riot-hot-reload": "0.0.2",
+    "riot-tag-loader": "^1.0.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
