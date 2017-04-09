@@ -1,5 +1,5 @@
 <main>
-  <h1>{ title } </h1>
+  <h1 id="my_title">{ title } </h1>
 
   this.title = opts.title
 </main>
