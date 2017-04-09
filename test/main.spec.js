@@ -9,5 +9,8 @@ describe('karma-riot specs', function() {
       title: "test title!"
     })
     expect(document.querySelector('h1').innerText).to.equal('test title!')
+    const button = document.querySelector('button')
+    button.click();
+    expect(document.querySelector('h1').innerText).to.equal('pushed!')
   })
 })
