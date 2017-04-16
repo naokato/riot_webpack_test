@@ -1,10 +1,20 @@
 <main>
-  <h1 id="my_title">{ title } </h1>
-  <button onclick={ change }> push me! </button>
+  <h1 id="my_title">{ props.title } </h1>
+  <sub subtitle={props.subtitle}></sub>
 
-  this.title = opts.title
+  <script>
+    this.store = opts.store
+    this.props = this.store.toProps()
 
-  this.change = (e) => {
-    this.title="pushed!";
-  }
+    this.on('update', () => {
+      console.log('=== main update! ===')
+      console.log(this.store);
+      console.log('=== main update end! ===')
+    })
+
+    this.change = (e) => {
+      e.preventUpdate = true
+      this.store.trigger('change_titles')
+    }
+  </script>
 </main>
